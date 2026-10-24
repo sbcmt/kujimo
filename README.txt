@@ -1,4 +1,3 @@
-KUJIMO 初期UI v0.1
-・GitHub Pages上でindex.htmlを公開するとスマホで確認できます。
-・Firebaseは未接続、抽選は未実装です。
-・画像は先行ロゴ案から切り出したPNGです。編集可能なベクター原稿ではありません。
+KUJIMO v0.5: 4抽選方式・商品名1列CSVテンプレート・履歴/CSV・Firebase連携。
+Firebase Authentication 匿名認証と Realtime Database を有効にしてください。ルールは firebase-rules.json と照合してください。
+GitHubにはZIPを展開した中身をアップロードしてください。
