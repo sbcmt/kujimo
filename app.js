@@ -58,7 +58,7 @@ $('joinBtn').onclick=async()=>{let code=$('watchCode').value.trim();if(!/^\d{6}$
 function paintPast(){let v=saved(),list=$('pastList');list.replaceChildren();for(let d of v){let row=document.createElement('div');let title=document.createElement('button');title.className='button outline';title.textContent=`抽選履歴 ${v.indexOf(d)+1}（${d.history.length}回）`;let details=document.createElement('div');details.className='hidden';d.history.forEach((h,i)=>{let item=document.createElement('div');item.textContent=`${i+1}回目　${h.value}`;details.append(item)});title.onclick=()=>details.classList.toggle('hidden');row.append(title,details);list.append(row)}if(!v.length)list.textContent='この端末に保存された履歴はありません'}
 restoreCurrent();
 // GitHub Pages deploys asynchronously. Poll the uncached version marker and refresh only outside an active draw.
-let newer=false;async function checkVersion(){try{const r=await fetch('version.json?check='+Date.now(),{cache:'no-store'});if(!r.ok)return;let d=await r.json();if(d.version!=='1.2.0')newer=true;if(newer){$('updateAlert').classList.toggle('hidden',!active);if(!busy&&!active&&!watchCodeActive)location.reload()}}catch{}}
+let newer=false;async function checkVersion(){try{const r=await fetch('version.json?check='+Date.now(),{cache:'no-store'});if(!r.ok)return;let d=await r.json();if(d.version!=='1.3.0')newer=true;if(newer){$('updateAlert').classList.toggle('hidden',!active);if(!busy&&!active&&!watchCodeActive)location.reload()}}catch{}}
 setInterval(checkVersion,45000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkVersion()});window.addEventListener('focus',checkVersion);
 
 window.addEventListener('pageshow',()=>{if(watchCodeActive)sizeViewer()});
