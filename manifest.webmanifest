@@ -1,1 +1,28 @@
-{"name":"KUJIMO","short_name":"KUJIMO","start_url":"./index.html","display":"standalone","background_color":"#10143b","theme_color":"#10143b","icons":[{"src":"assets/kujimo-icon.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]}
+{
+  "name": "KUJIMO",
+  "short_name": "KUJIMO",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#111637",
+  "theme_color": "#111637",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
